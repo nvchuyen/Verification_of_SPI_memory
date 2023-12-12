@@ -11,6 +11,8 @@
 //
 ///////////////////////////////////////////////////////////////
  
+`include "transaction.svh"
+
 class read_data extends uvm_sequence#(transaction);
     `uvm_object_utils(read_data)
   

@@ -10,6 +10,13 @@
 //
 //
 /////////////////////////////////////////////////////////////////
+import uvm_pkg::*;
+`include "uvm_macros.svh"
+
+import env_pkg::*;
+import agent_pkg::*;
+
+`include "transaction.svh"
  
 class reset_dut extends uvm_sequence#(transaction);
   `uvm_object_utils(reset_dut)

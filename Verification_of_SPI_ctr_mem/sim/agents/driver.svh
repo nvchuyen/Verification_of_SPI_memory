@@ -21,6 +21,7 @@ class driver extends uvm_driver #(transaction);
       super.new(path,parent);
     endfunction
   
+
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
         tr = transaction::type_id::create("tr");
@@ -29,6 +30,7 @@ class driver extends uvm_driver #(transaction);
         `uvm_error("drv","Unable to access Interface");
     endfunction
   
+
     task reset_dut();
         repeat(5) 
         begin
@@ -41,8 +43,10 @@ class driver extends uvm_driver #(transaction);
         end
     endtask
   
+
     task drive();
         reset_dut();
+        
         forever begin
             seq_item_port.get_next_item(tr);     
             if(tr.op ==  rstdut)

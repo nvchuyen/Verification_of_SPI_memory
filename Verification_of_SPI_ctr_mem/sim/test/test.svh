@@ -1,20 +1,28 @@
+//-----------------------------------------------------------------------
+//
+//
+//
+//-----------------------------------------------------------------------
+//
+//
+//
 //////////////////////////////////////////////////////////////////////////
  
 class test extends uvm_test;
 `uvm_component_utils(test)
  
-function new(input string inst = "test", uvm_component c);
-super.new(inst,c);
-endfunction
+    function new(input string inst = "test", uvm_component c);
+        super.new(inst,c);
+    endfunction
  
-env e;
-write_data wdata;
-write_err werr;
+    env e;
+    write_data wdata;
+    write_err werr;
   
-read_data rdata;
-read_err rerr;
+    read_data rdata;
+    read_err rerr;
   
-writeb_readb wrrdb;
+    writeb_readb wrrdb;
  
  
 reset_dut rstdut;  
@@ -38,3 +46,4 @@ reset_dut rstdut;
     endtask
     
 endclass
+

@@ -1,14 +1,176 @@
-# vsim -c -sv_seed 20 top_tb -l vsim.log -dpicpppath /usr/bin/gcc "+UVM_VERBOSITY=UVM_LOW" "+UVM_TESTNAME=FIRST_TEST
-# " -assertdebug -coverage "+voptargs=+acc" -do "set WildcardFilter None; add wave -position insertpoint sim:/uvm_pkg/*;
-# 
-# 	add wave -r top_tb/*; run -all; quit;
-# " 
-# Start time: 10:26:29 on Nov 07,2023
+# vsim -c -sv_seed 20 top_tb -l vsim.log -dpicpppath /usr/bin/gcc "+UVM_VERBOSITY=UVM_LOW" "+UVM_TESTNAME=test" -assertdebug -coverage "+voptargs=+acc" -do "set WildcardFilter None; add wave -position insertpoint sim:/uvm_pkg/*;
+# add wave -r top_tb/*; run -all; quit;" 
+# Start time: 16:48:51 on Dec 12,2023
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: (vopt-13130) Failed to find design unit top_tb.
-#         Searched libraries:
-#             work
-# Optimization failed
-# Error loading design
-# End time: 10:26:29 on Nov 07,2023, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
+# ** Note: (vopt-143) Recognized 1 FSM in module "spi_mem(fast)".
+# //  Questa Sim
+# //  Version 10.7c linux Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.spi_i(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.agent_pkg(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.env_pkg(fast)
+# Loading work.seq_lib_pkg(fast)
+# Loading work.test_lib_pkg(fast)
+# Loading work.top_tb_sv_unit(fast)
+# Loading work.top_tb(fast)
+# Loading work.spi_i(fast)
+# Loading work.top(fast)
+# Loading work.spi_intf(fast)
+# Loading work.spi_mem(fast)
+# set WildcardFilter None
+# None
+#  add wave -position insertpoint sim:/uvm_pkg/*
+# 
+# add wave -r top_tb/*
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# UVM_INFO ../agents/mon.svh(29) @ 10000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(33) @ 10000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/mon.svh(29) @ 30000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(33) @ 30000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/mon.svh(29) @ 50000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(33) @ 50000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/mon.svh(29) @ 70000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(33) @ 70000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/mon.svh(29) @ 90000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(33) @ 90000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(64) @ 110000: uvm_test_top.env.a.d [DRV] mode : Write addr:5 din:15
+# UVM_INFO ../agents/mon.svh(39) @ 550000: uvm_test_top.env.a.m [MON] DATA WRITE addr:5 data:15 err:0
+# UVM_INFO ../agents/sco.svh(44) @ 550000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:5, wdata:15 arr_wr:15
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(64) @ 570000: uvm_test_top.env.a.d [DRV] mode : Write addr:9 din:215
+# UVM_INFO ../agents/mon.svh(39) @ 1010000: uvm_test_top.env.a.m [MON] DATA WRITE addr:9 data:215 err:0
+# UVM_INFO ../agents/sco.svh(44) @ 1010000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:9, wdata:215 arr_wr:215
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(64) @ 1030000: uvm_test_top.env.a.d [DRV] mode : Write addr:1 din:78
+# UVM_INFO ../agents/mon.svh(39) @ 1470000: uvm_test_top.env.a.m [MON] DATA WRITE addr:1 data:78 err:0
+# UVM_INFO ../agents/sco.svh(44) @ 1470000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:1, wdata:78 arr_wr:78
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(64) @ 1490000: uvm_test_top.env.a.d [DRV] mode : Write addr:8 din:98
+# UVM_INFO ../agents/mon.svh(39) @ 1930000: uvm_test_top.env.a.m [MON] DATA WRITE addr:8 data:98 err:0
+# UVM_INFO ../agents/sco.svh(44) @ 1930000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:8, wdata:98 arr_wr:98
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(64) @ 1950000: uvm_test_top.env.a.d [DRV] mode : Write addr:2 din:107
+# UVM_INFO ../agents/mon.svh(39) @ 2390000: uvm_test_top.env.a.m [MON] DATA WRITE addr:2 data:107 err:0
+# UVM_INFO ../agents/sco.svh(44) @ 2390000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:2, wdata:107 arr_wr:107
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(64) @ 2410000: uvm_test_top.env.a.d [DRV] mode : Write addr:0 din:58
+# UVM_INFO ../agents/mon.svh(39) @ 2850000: uvm_test_top.env.a.m [MON] DATA WRITE addr:0 data:58 err:0
+# UVM_INFO ../agents/sco.svh(44) @ 2850000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:0, wdata:58 arr_wr:58
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(64) @ 2870000: uvm_test_top.env.a.d [DRV] mode : Write addr:6 din:194
+# UVM_INFO ../agents/mon.svh(39) @ 3310000: uvm_test_top.env.a.m [MON] DATA WRITE addr:6 data:194 err:0
+# UVM_INFO ../agents/sco.svh(44) @ 3310000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:6, wdata:194 arr_wr:194
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(64) @ 3330000: uvm_test_top.env.a.d [DRV] mode : Write addr:10 din:239
+# UVM_INFO ../agents/mon.svh(39) @ 3770000: uvm_test_top.env.a.m [MON] DATA WRITE addr:10 data:239 err:0
+# UVM_INFO ../agents/sco.svh(44) @ 3770000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:10, wdata:239 arr_wr:239
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(64) @ 3790000: uvm_test_top.env.a.d [DRV] mode : Write addr:6 din:209
+# UVM_INFO ../agents/mon.svh(39) @ 4230000: uvm_test_top.env.a.m [MON] DATA WRITE addr:6 data:209 err:0
+# UVM_INFO ../agents/sco.svh(44) @ 4230000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:6, wdata:209 arr_wr:209
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(64) @ 4250000: uvm_test_top.env.a.d [DRV] mode : Write addr:9 din:45
+# UVM_INFO ../agents/mon.svh(39) @ 4690000: uvm_test_top.env.a.m [MON] DATA WRITE addr:9 data:45 err:0
+# UVM_INFO ../agents/sco.svh(44) @ 4690000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:9, wdata:45 arr_wr:45
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(74) @ 4710000: uvm_test_top.env.a.d [DRV] mode : Read addr:0 din:188
+# UVM_INFO ../agents/mon.svh(49) @ 5170000: uvm_test_top.env.a.m [MON] DATA READ addr:0 data:58 slverr:0
+# UVM_INFO ../agents/sco.svh(57) @ 5170000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:0, rdata:58
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(74) @ 5190000: uvm_test_top.env.a.d [DRV] mode : Read addr:0 din:186
+# UVM_INFO ../agents/mon.svh(49) @ 5650000: uvm_test_top.env.a.m [MON] DATA READ addr:0 data:58 slverr:0
+# UVM_INFO ../agents/sco.svh(57) @ 5650000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:0, rdata:58
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(74) @ 5670000: uvm_test_top.env.a.d [DRV] mode : Read addr:5 din:179
+# UVM_INFO ../agents/mon.svh(49) @ 6130000: uvm_test_top.env.a.m [MON] DATA READ addr:5 data:15 slverr:0
+# UVM_INFO ../agents/sco.svh(57) @ 6130000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:5, rdata:15
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(74) @ 6150000: uvm_test_top.env.a.d [DRV] mode : Read addr:7 din:36
+# UVM_INFO ../agents/mon.svh(49) @ 6610000: uvm_test_top.env.a.m [MON] DATA READ addr:7 data:0 slverr:0
+# UVM_INFO ../agents/sco.svh(57) @ 6610000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:7, rdata:0
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(74) @ 6630000: uvm_test_top.env.a.d [DRV] mode : Read addr:3 din:111
+# UVM_INFO ../agents/mon.svh(49) @ 7090000: uvm_test_top.env.a.m [MON] DATA READ addr:3 data:0 slverr:0
+# UVM_INFO ../agents/sco.svh(57) @ 7090000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:3, rdata:0
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(74) @ 7110000: uvm_test_top.env.a.d [DRV] mode : Read addr:3 din:44
+# UVM_INFO ../agents/mon.svh(49) @ 7570000: uvm_test_top.env.a.m [MON] DATA READ addr:3 data:0 slverr:0
+# UVM_INFO ../agents/sco.svh(57) @ 7570000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:3, rdata:0
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(74) @ 7590000: uvm_test_top.env.a.d [DRV] mode : Read addr:4 din:141
+# UVM_INFO ../agents/mon.svh(49) @ 8050000: uvm_test_top.env.a.m [MON] DATA READ addr:4 data:0 slverr:0
+# UVM_INFO ../agents/sco.svh(57) @ 8050000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:4, rdata:0
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(74) @ 8070000: uvm_test_top.env.a.d [DRV] mode : Read addr:6 din:120
+# UVM_INFO ../agents/mon.svh(49) @ 8530000: uvm_test_top.env.a.m [MON] DATA READ addr:6 data:209 slverr:0
+# UVM_INFO ../agents/sco.svh(57) @ 8530000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:6, rdata:209
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(74) @ 8550000: uvm_test_top.env.a.d [DRV] mode : Read addr:3 din:142
+# UVM_INFO ../agents/mon.svh(49) @ 9010000: uvm_test_top.env.a.m [MON] DATA READ addr:3 data:0 slverr:0
+# UVM_INFO ../agents/sco.svh(57) @ 9010000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:3, rdata:0
+# ----------------------------------------------------------------
+# UVM_INFO ../agents/driver.svh(74) @ 9030000: uvm_test_top.env.a.d [DRV] mode : Read addr:8 din:77
+# UVM_INFO ../agents/mon.svh(49) @ 9490000: uvm_test_top.env.a.m [MON] DATA READ addr:8 data:98 slverr:0
+# UVM_INFO ../agents/sco.svh(57) @ 9490000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:8, rdata:98
+# ----------------------------------------------------------------
+# UVM_INFO /11tools/MENTOR/questasim_10.7c/questasim/verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 9510000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   72
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [DRV]    20
+# [MON]    25
+# [RNTST]     1
+# [SCO]    25
+# [TEST_DONE]     1
+# ** Note: $finish    : /11tools/MENTOR/questasim_10.7c/questasim/verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 9510 ns  Iteration: 54  Instance: /top_tb
+# End time: 16:48:56 on Dec 12,2023, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0

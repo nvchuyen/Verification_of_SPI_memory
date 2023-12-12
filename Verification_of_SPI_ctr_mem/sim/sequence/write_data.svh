@@ -8,15 +8,16 @@
 //
 // Class Description
 //
-///////////////////write seq
+//
+//////////////////////////////////////////////////
 
 class write_data extends uvm_sequence#(transaction);
-  `uvm_object_utils(write_data)
+    `uvm_object_utils(write_data)
   
-  transaction tr;
+    transaction tr;
  
     function new(string name = "write_data");
-      super.new(name);
+        super.new(name);
     endfunction
   
     virtual task body();
@@ -30,4 +31,6 @@ class write_data extends uvm_sequence#(transaction);
             tr.op = writed;
             finish_item(tr);
         end
-endtask
+    endtask
+
+endclass
